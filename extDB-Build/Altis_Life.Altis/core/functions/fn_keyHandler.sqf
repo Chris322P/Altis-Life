@@ -207,11 +207,11 @@ switch (_code) do
 					if(_locked == 0) then {
 						_veh setVariable[format["bis_disabled_Door_%1",_door],1,true];
 						_veh animate [format["door_%1_rot",_door],0];
-						systemChat "You have locked that door.";
+						systemChat "Du hast diese Tür abgeschlossen.";
 					} else {
 						_veh setVariable[format["bis_disabled_Door_%1",_door],0,true];
 						_veh animate [format["door_%1_rot",_door],1];
-						systemChat "You have unlocked that door.";
+						systemChat "Du hast diese Tür aufgeschlossen.";
 					};
 				};
 			} else {
@@ -223,14 +223,16 @@ switch (_code) do
 						} else {
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};
-						systemChat "You have unlocked your vehicle.";
+						player say3D "car_unlock";
+						systemChat "Du hast dein Fahrzeug aufgeschlossen.";
 					} else {
 						if(local _veh) then {
 							_veh lock 2;
 						} else {
 							[[_veh,2],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};	
-						systemChat "You have locked your vehicle.";
+						player say3D "car_lock";
+						systemChat "Du hast dein Fahrzeug abgeschlossen.";
 					};
 				};
 			};
