@@ -148,6 +148,51 @@ switch (_shop) do
 			["B_SDV_01_F",100000]
 		];
 	};
+	
+	case "admin_cheat":
+	{
+		_return =
+		[
+			["C_Kart_01_Blu_F"],
+ 			["C_Kart_01_Fuel_F"],
+ 			["C_Kart_01_Red_F"],
+ 			["C_Kart_01_Vrana_F"],
+			["B_Quadbike_01_F"],
+			["C_Offroad_01_F"],
+			["C_Hatchback_01_F"],
+			["C_Hatchback_01_sport_F"],
+			["C_SUV_01_F"],
+			["C_Van_01_transport_F"],
+			["C_Van_01_box_F"],
+			["I_Truck_02_transport_F"],
+			["I_Truck_02_covered_F"],
+			["B_Truck_01_covered_F"],
+			["B_Truck_01_transport_F"],
+			["B_MRAP_01_F"],
+			["I_MRAP_03_F"],
+			["I_Heli_light_03_unarmed_F"],
+			["B_Heli_Light_01_F"],
+			["O_Heli_Light_02_unarmed_F"],
+			["B_Heli_Transport_01_F"],
+			["I_Heli_Transport_02_F"],
+			["C_Van_01_fuel_F"],
+			["I_Plane_Fighter_03_AA_F"],
+			["B_Plane_CAS_01_F"],
+			["O_Plane_CAS_02_F"],
+			["B_APC_Tracked_01_CRV_F"],
+			["O_APC_Tracked_02_cannon_F"],
+			["B_MBT_01_cannon_F"],
+			["B_APC_Wheeled_01_cannon_F"],
+			["B_APC_Wheeled_03_cannon_F"],
+			["B_MRAP_01_hmg_F"],
+			["B_G_Offroad_01_armed_F"],
+			["B_Boat_Transport_01_F"],
+			["C_Boat_Civil_01_police_F"],
+			["B_Boat_Armed_01_minigun_F"],
+			["B_SDV_01_F"],
+			["C_Rubberboat"]
+		];
+	};
 };
 
 _return;
