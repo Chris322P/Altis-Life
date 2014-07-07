@@ -19,7 +19,7 @@ _ownerID = _gang select 4;
 if(getPlayerUID player == _ownerID) then
 {
 	if(count (units(group player)) > 1) then
-	{ // Nächster Admin
+	{
 		{
 			if(_x != player) exitWith
 			{
@@ -30,16 +30,12 @@ if(getPlayerUID player == _ownerID) then
 		life_gang_list set[_index,[_name,_group,_locked,str(_new_owner),(getPlayerUID _new_owner)]];
 		publicVariable "life_gang_list";
 		[[_new_owner,_group], "clientGangLeader",_new_owner,false] spawn life_fnc_MP;
-		
-		[[getPlayerUID _new_owner,_name], "MSC_fnc_updateGangLeader",false,false] spawn life_fnc_MP;
 	}
 		else
-	{ // Wenn keiner mehr in der Gang ist bei leaving wird gelöscht
+	{
 		life_gang_list set [_index,-1];
 		life_gang_list = life_gang_list - [-1];
 		publicVariable "life_gang_list";
-		
-		[[_name], "MSC_fnc_removeGang",false,false] spawn life_fnc_MP;
 	};
 };
 
@@ -49,7 +45,7 @@ if(rank player != "PRIVATE") then
 	player setRank "PRIVATE";
 };
 [player] joinSilent (createGroup civilian);
-hint "Du hast deine Gang verlassen.";
-[[getPlayerUID player, _name],"MSC_fnc_removeGangPlayer",false,false] spawn life_fnc_MP;
+hint "You have left your gang.";
+
 
 closeDialog 0;

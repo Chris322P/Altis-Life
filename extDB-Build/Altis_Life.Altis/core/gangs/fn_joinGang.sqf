@@ -5,7 +5,7 @@
 	Description:
 	Joins the selected gang if it is open.
 */
-private["_dialog","_sel","_gangs","_gang","_group","_locked","_name"];
+private["_dialog","_sel","_gangs","_gang","_group","_locked"];
 disableSerialization;
 
 _dialog = findDisplay 2520;
@@ -25,16 +25,13 @@ if(!isNull _group) then
 	{
 		[player] join _group;
 		life_my_gang = _group;
-		hint format["Du bist der Gang %1 beigetreten.",_gang select 0];
-		
-		_name = _gang select 0;
-		[[getPlayerUID player, _name],"MSC_fnc_insertGangPlayer",false,false] spawn life_fnc_MP;
+		hint format["You have joined the gang: %1",_gang select 0];
 		
 		closeDialog 0;
 	}
 		else
 	{
-		hint "Die Gang ist momentan Geschlossen und erlaubt niemanden beizutreten.";
+		hint "This gang is currently locked and is not allowing players to join.";
 	};
 }
 	else

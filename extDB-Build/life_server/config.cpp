@@ -80,22 +80,6 @@ class CfgFunctions
 		};
 	};
 	
-	class msc_System {
-		tag = "MSC";
-		class msc
-		{
-			file = "\life_server\Functions\Gang";
-			class insertGang{};
-			class queryGangs{};
-			class queryGangPlayers{};
-			class insertGangPlayer{};
-			class removeGangPlayer{};
-			class removeGang{};
-			class updateGangLeader{};
-			class updateGanglock{};
-		};
-	};
-	
 	class TON_System
 	{
 		tag = "TON";

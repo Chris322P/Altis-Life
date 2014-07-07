@@ -84,31 +84,7 @@ switch (_side) do {
 		_houseData = _uid spawn TON_fnc_fetchPlayerHouses;
 		waitUntil {scriptDone _houseData};
 		_queryResult set[count _queryResult,(missionNamespace getVariable[format["houses_%1",_uid],[]])];
-		
-		
 	};
-};
-
-_queryGangResult = [];
-switch (_side) do {
-    case civilian: {
-        _queryGang = format["SELECT gang_players.playerid, gangs.id, gangs.gangname, gangs.locked, gang_players.rank FROM gangs LEFT JOIN gang_players on gang_players.gangid=gangs.id WHERE gang_players.playerid='%1'",_uid];
-        waitUntil{!DB_Async_Active};
-            while {true} do {
-            _threadGang = [_queryGang,_uid] spawn _handler;
-            waitUntil {scriptDone _threadGang};
-            sleep 0.2;
-            _queryGangResult = missionNamespace getVariable format["QUERY_%1",_uid];
-            if(!isNil "_queryResult") exitWith {};
-        };
-        missionNamespace setVariable[format["QUERY_%1",_uid],nil]; //Unset the variable.
-        if (typeName _queryGangResult != "STRING") then {
-            _old = _queryGangResult select 3;
-            _new = [parseNumber(_old), 1] call DB_fnc_bool;
-            _queryGangResult set [3, _new];
-            _queryResult set[10, _queryGangResult];
-        };
-    };    
 };
 
 [_queryResult,"SOCK_fnc_requestReceived",_ownerID,false] spawn life_fnc_MP;
