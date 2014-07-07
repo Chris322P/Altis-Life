@@ -17,7 +17,7 @@ _data = call compile format["%1", _data];
 
 _index = [life_my_gang,life_gang_list] call fnc_index;
 if(_index == -1) exitWith {};
-if(_data == player) exitWith {hint "You can't kick yourself"};
+if(_data == player) exitWith {hint "Du kannst dich nicht selber kicken"};
 
 _gang = life_gang_list select _index;
 _name = _gang select 0;
@@ -42,4 +42,5 @@ switch (true) do
 };
 [[_data,_group], "clientGangKick",_data,false] spawn life_fnc_MP;
 
+[[getPlayerUID _data, _name],"MSC_fnc_removeGangPlayer",false,false] spawn life_fnc_MP;
 [false] spawn life_fnc_gangManagement;

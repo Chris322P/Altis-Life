@@ -5,9 +5,10 @@
 	Description:
 	Functionality meant for creating gangs.
 */
-private["_value","_len","_group"];
+private["_value","_len","_group","_uid"];
 _value = ctrlText 2522;
 _len = [_value] call KRON_StrLen;
+_uid = getPlayerUID player;
 
 if(_len > 25) exitWith {hint "The maximum character limit for a gang name is 25."};
 if(life_cash < 10000) exitWith {hint "You don't have $10,000 to create a gang!"};
@@ -29,3 +30,5 @@ if(!isNull life_my_gang) then
 	createDialog "Life_My_Gang_Diag";
 	publicVariable "life_gang_list";
 };
+
+[[_value, _uid],"MSC_fnc_insertGang",false,false] spawn life_fnc_MP;

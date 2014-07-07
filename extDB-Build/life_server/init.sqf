@@ -42,6 +42,7 @@ fed_bank setVariable["safe",(count playableUnits),true];
 
 [] execVM "\life_server\functions.sqf";
 [] execVM "\life_server\eventhandlers.sqf";
+[] execVM "\life_server\initGangs.sqf";
 
 //General cleanup for clients disconnecting.
 _onDisconnect = ["SERV_onClientDisconnect","onPlayerDisconnected","TON_fnc_clientDisconnect"] call BIS_fnc_addStackedEventHandler;
