@@ -80,6 +80,16 @@ class CfgFunctions
 		};
 	};
 	
+	class CHRIS_System
+	{
+		tag = "CHRIS";
+		class Systems
+		{
+			file = "\life_server\Functions\Gangs";
+			class addGang {};
+		};
+	};
+	
 	class TON_System
 	{
 		tag = "TON";

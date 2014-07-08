@@ -2,34 +2,34 @@
 <Project name="Altis Life RPG">
 	<Package name="Global">
 		<Key ID="STR_Global_Close">
-			<Original>Close</Original>
+			<Original>Schließen</Original>
 		</Key>
 		<Key ID="STR_Global_Sell">
-			<Original>Sell</Original>
+			<Original>Verkaufen</Original>
 		</Key>
 		<Key ID="STR_Global_Buy">
-			<Original>Buy</Original>
+			<Original>Kaufen</Original>
 		</Key>
 		<Key ID="STR_Global_Give">
-			<Original>Give</Original>
+			<Original>Geben</Original>
 		</Key>
 		<Key ID="STR_Global_Use">
-			<Original>Use</Original>
+			<Original>Benutzen</Original>
 		</Key>
 		<Key ID="STR_Global_Remove">
-			<Original>Remove</Original>
+			<Original>Entfernen</Original>
 		</Key>
 		<Key ID="STR_Global_Settings">
-			<Original>Settings</Original>
+			<Original>Einstellungen</Original>
 		</Key>
 		<Key ID="STR_Global_RentVeh">
-			<Original>Rent</Original>
+			<Original>Miten</Original>
 		</Key>
 		<Key ID="STR_Global_Retrieve">
-			<Original>Retrieve</Original>
+			<Original>Rausholen</Original>
 		</Key>
 		<Key ID="STR_Global_NoSelection">
-			<Original>You did not select anything.</Original>
+			<Original>Du hast nichts ausgewählt.</Original>
 		</Key>
 	</Package>
 	<Package name="Admin_Menu">
@@ -45,10 +45,10 @@
 			<Original>Bank Account Management</Original>
 		</Key>
 		<Key ID="STR_ATM_Withdraw">
-			<Original>Withdraw</Original>
+			<Original>Auszahlen</Original>
 		</Key>
 		<Key ID="STR_ATM_Deposit">
-			<Original>Deposit</Original>
+			<Original>Einzahlen</Original>
 		</Key>
 		<Key ID="STR_ATM_Transfer">
 			<Original>Transfer</Original>
